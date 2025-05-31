@@ -1,0 +1,116 @@
+
+/* Stili per il contenuto principale */
+
+
+.hero-main {
+    padding: 20px;
+    margin: 20px auto;
+    max-width: 1600px;
+    background-color: #ffffff;
+    border-radius: 8px;
+    width: 100%; /* Ricordato! */
+}
+
+.hero-title {
+    color: #333;
+    text-align: center;
+    margin-bottom: 30px;
+}
+
+/* Stili per la griglia dei cani */
+.dog-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(500px, 1fr)); /* Griglia a più colonne responsiva (default) */
+    gap: 20px; /* Spazio tra le card */
+}
+
+/* Stili per la singola scheda del cane */
+.dog-card {
+    background-color: #ADD8E6;
+    border-radius: 8px;
+    overflow: hidden;
+    box-shadow: 0 0.5rem 0.25rem rgba(0, 0, 0, 0.09);
+    display: flex;
+    flex-direction: column;
+    padding: 5px;
+}
+
+/* Stili per il contenitore dell'immagine */
+.dog-image-container {
+    width: 100%;
+    height: 200px;
+    overflow: hidden;
+    border-radius: 8px 8px 0 0;
+}
+
+/* Stili per l'immagine del cane */
+.dog-image {
+    width: 100%;
+    height: 100%;
+    display: block;
+    object-fit: contain;
+}
+
+/* Stili per le informazioni del cane */
+.dog-info {
+    padding: 10px;
+    text-align: center;
+    /* Rimossa l'altezza massima e l'overflow per permettere agli altri elementi di fluire */
+}
+
+/* Stili per il contenitore della storia del cane (scrollbar solo qui) */
+.dog-story-container {
+    max-height: 2000px; /* Imposta un'altezza massima per far apparire la scrollbar quando necessario */
+    overflow-y: auto; /* Aggiunge la scrollbar verticale se il contenuto supera l'altezza massima */
+    margin-top: 10px; /* Aggiunge un po' di spazio sopra la storia */
+    text-align: left; /* Riporta il testo della storia ad allineamento a sinistra per la lettura */
+}
+
+/* Stili per il nome del cane (titolo) */
+.dog-name {
+    font-size: 1.2rem;
+    margin-bottom: 5px;
+    font-weight: bold;
+    color: #212529;
+}
+
+/* Stili per il tipo di assistenza (sottotitolo) */
+.dog-assistance {
+    font-size: 0.9rem;
+    color: #6c757d;
+    margin-bottom: 10px;
+}
+
+/* Stili per la breve storia */
+.dog-story {
+    font-size: 1rem;
+    color: #495057;
+    margin-bottom: 0; /* Rimosso il margine inferiore per evitare spazio extra nella scrollbar */
+}
+
+
+/* Media query per schermi più piccoli (mobile) */
+@media (max-width: 980px) {
+    body {
+        border: 6px solid #ADD8E6;
+    }
+
+    .dog-grid {
+        grid-template-columns: repeat(1, 1fr); /* Imposta la griglia a una sola colonna su mobile */
+    }
+
+    .dog-image-container {
+        height: 150px; /* Altezza ridotta su mobile */
+    }
+
+    .dog-info {
+        padding: 8px;
+    }
+
+    .dog-story-container {
+        max-height: 120px; /* Altezza ridotta su mobile */
+        overflow-y: auto;
+        margin-top: 5px;
+        text-align: left;
+    }
+}
