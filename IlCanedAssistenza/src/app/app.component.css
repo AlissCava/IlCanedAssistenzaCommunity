@@ -1,0 +1,229 @@
+/* Stili per la sezione del banner di benvenuto in alto */
+.welcome-banner {
+    background-color: #ADD8E6; /* Sfondo del banner uguale allo sfondo della pagina */
+    color: #000000; /* Colore del testo del banner */
+    padding: 20px;
+    text-align: center; /* Allineamento del testo al centro */
+    font-size: 1rem;
+    margin-bottom: 20px;
+}
+
+.welcome-banner h1 {
+    margin-bottom: 10px;
+    font-size: 1.5rem;
+    font-weight: bold;
+}
+
+.welcome-banner h1 i {
+    color: #87CEEB; /* Colore dell'icona nel titolo del banner */
+}
+
+.welcome-banner p {
+    color: #333333; /* Colore del paragrafo del banner */
+    font-size: 1rem;
+}
+
+/* ==========================================================================
+   Stili per le Sezioni di Contenuto Principale
+   ========================================================================== */
+
+/* Stili per le sezioni di contenuto standard */
+.section {
+    margin-bottom: 20px;
+    overflow: hidden; /* Nasconde gli elementi flottanti che escono dal contenitore */
+    padding: 20px;
+    background-color: #ffffff; /* Sfondo bianco per le sezioni */
+    display: flex; /* Utilizzo di Flexbox per la disposizione degli elementi interni */
+    align-items: center; /* Allineamento verticale degli elementi al centro */
+    flex-direction: row; /* Disposizione degli elementi in riga (testo a sinistra, immagine a destra predefinito) */
+}
+
+.section:last-of-type {
+    margin-bottom: 20px;
+}
+
+/* Stili per i blocchi di contenuto (testo e immagine) all'interno delle sezioni */
+.section .content-block {
+    width: 48%; /* Larghezza del 48% per affiancare testo e immagine con un piccolo spazio */
+    border-radius: 8px;
+    box-sizing: border-box; /* Include padding e bordo nella larghezza e altezza totali */
+    margin-bottom: 0;
+    margin-top: 0;
+    min-height: auto;
+}
+
+/* Stili specifici per il blocco di testo */
+.section .text-block {
+    float: left; /* Posiziona il blocco di testo a sinistra */
+    display: flex; /* Utilizzo di Flexbox per la disposizione interna */
+    flex-direction: column; /* Disposizione degli elementi (titolo, paragrafo) in colonna */
+    justify-content: center; /* Allineamento verticale del contenuto al centro */
+    align-items: flex-start; /* Allineamento orizzontale del contenuto a sinistra */
+    padding: 20px;
+    box-sizing: border-box;
+    text-align: left;
+    font-size: 1rem;
+}
+
+.section .text-block h2 {
+    font-weight: bold;
+    margin-bottom: 10px;
+    font-size: 1.5rem;
+}
+
+.section .text-block h2 i {
+    color: #87CEEB; /* Colore dell'icona nel titolo della sezione */
+}
+
+.section .text-block p {
+    text-align: left;
+}
+
+/* Stili specifici per il blocco immagine */
+.section .image-block {
+    float: right; /* Posiziona il blocco immagine a destra */
+}
+
+/* Stili per la sezione invertita (immagine a sinistra, testo a destra) */
+.section-reverse {
+    margin-bottom: 20px;
+    overflow: hidden;
+    padding: 20px;
+    background-color: #ffffff; /* Sfondo bianco */
+    display: flex;
+    align-items: center;
+    flex-direction: row-reverse; /* Inverte l'ordine degli elementi (immagine a sinistra, testo a destra) */
+}
+
+.section-reverse .content-block {
+    width: 48%;
+    border-radius: 8px;
+    box-sizing: border-box;
+    margin-bottom: 0;
+    margin-top: 0;
+    min-height: auto;
+}
+
+.section-reverse .text-block {
+    float: right; /* Posiziona il blocco di testo a destra */
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start;
+    padding: 20px;
+    box-sizing: border-box;
+    text-align: left;
+    font-size: 1rem;
+}
+
+.section-reverse .text-block h2 {
+    font-weight: bold;
+    margin-bottom: 10px;
+    font-size: 1.5rem;
+}
+
+.section-reverse .text-block h2 i {
+    color: #87CEEB; /* Colore dell'icona nel titolo della sezione invertita */
+}
+
+.section-reverse .text-block p {
+    text-align: left;
+}
+
+.section-reverse .image-block {
+    float: left; /* Posiziona il blocco immagine a sinistra */
+}
+
+/* ==========================================================================
+   Stili per il Bottone Principale
+   ========================================================================== */
+
+/* Stili per il bottone "Scopri i nostri eroi" */
+.button-eroi {
+    display: inline-block; /* Permette di impostare larghezza e altezza e di affiancare altri elementi */
+    background-color: #87CEEB; /* Sfondo del bottone */
+    color: white; /* Colore del testo del bottone */
+    padding: 10px 20px;
+    text-decoration: none; /* Rimozione della sottolineatura */
+    border-radius: 5px; /* Angoli arrotondati */
+    margin-top: 15px;
+    transition: background-color 0.3s ease; /* Transizione fluida per il cambio di colore al passaggio del mouse */
+    border: none; /* Rimozione del bordo predefinito */
+}
+
+.button-eroi:hover {
+    background-color: #66ace0; /* Sfondo del bottone leggermente più scuro al passaggio del mouse */
+}
+
+.button-eroi i {
+    margin-left: 10px; /* Spazio tra il testo e l'icona */
+}
+
+
+@media (max-width: 768px) {
+    .welcome-banner {
+        margin-bottom: 10px;
+        font-size: 1rem;
+    }
+
+    .welcome-banner h1 {
+        font-size: 1.5rem;
+    }
+
+    .welcome-banner p {
+        font-size: 1rem;
+    }
+
+    .section {
+        margin-bottom: 10px;
+        padding: 10px;
+        flex-direction: column; /* Impila gli elementi verticalmente su schermi piccoli */
+        align-items: center; /* Allinea gli elementi al centro orizzontalmente */
+    }
+
+    .section .content-block {
+        width: 100%; /* Occupano tutta la larghezza disponibile */
+        float: none;
+        margin-bottom: 15px;
+        margin-top: 0;
+    }
+
+    .section .text-block {
+        text-align: center; /* Centra il testo su schermi piccoli */
+        align-items: center; /* Allinea gli elementi (testo) al centro orizzontalmente */
+    }
+
+    .section .image-block {
+        float: none;
+    }
+
+    .section-reverse {
+        margin-bottom: 10px;
+        padding: 10px;
+        flex-direction: column-reverse; /* Impila gli elementi verticalmente (immagine sopra il testo) */
+        align-items: center; /* Allinea gli elementi al centro orizzontalmente */
+    }
+
+    .section-reverse .content-block {
+        width: 100%;
+        float: none;
+        margin-bottom: 15px;
+        margin-top: 0;
+    }
+
+    .section-reverse .text-block {
+        text-align: center; /* Centra il testo */
+        align-items: center; /* Allinea gli elementi (testo) orizzontalmente */
+    }
+
+    .section-reverse .image-block {
+        float: none;
+    }
+
+    .button-eroi {
+        padding: 8px 15px;
+        font-size: 1rem;
+        margin-top: 10px;
+    }
+
+}

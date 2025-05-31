@@ -1,0 +1,188 @@
+body {
+    font-family: sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #ADD8E6; /* Azzurro chiaro di sfondo */
+    border: 12px solid #ADD8E6; /* Bordo esterno dello stesso colore dello sfondo */
+    box-sizing: border-box;
+    min-height: 100vh; /* Assicura che il body occupi almeno l'altezza della viewport */
+    display: flex; /* Utilizzo di Flexbox per la disposizione degli elementi figli */
+    flex-direction: column; /* Disposizione degli elementi figli in colonna */
+}
+
+.navbar {
+    background-color: #ADD8E6; /* Sfondo della navbar uguale allo sfondo della pagina */
+    margin-top: 0;
+}
+
+/* Stili per il marchio (logo e testo) della navbar */
+.navbar-brand {
+    display: flex; /* Utilizzo di Flexbox per allineare logo e testo */
+    align-items: center; /* Allineamento verticale degli elementi al centro */
+}
+
+.navbar-brand a {
+    font-size: 1.5rem;
+    color: #000000; /* Colore del testo del marchio */
+    text-decoration: none; /* Rimozione della sottolineatura dai link */
+}
+
+.navbar-brand img {
+    margin-right: 10px; /* Spazio a destra dell'immagine del logo */
+}
+
+/* Stili per il marchio e i link di navigazione */
+.navbar-brand,
+.navbar-nav .nav-link {
+    color: #000000; /* Colore del testo dei link della navbar */
+}
+
+.navbar-brand:hover,
+.navbar-nav .nav-link:hover {
+    color: #333333; /* Colore del testo dei link al passaggio del mouse */
+}
+
+/* ==========================================================================
+   Stili per il Banner di Benvenuto
+   ========================================================================== */
+
+/* Stili per la sezione del banner di benvenuto in alto */
+.welcome-banner {
+    background-color: #ADD8E6; /* Sfondo del banner uguale allo sfondo della pagina */
+    color: #000000; /* Colore del testo del banner */
+    padding: 20px;
+    text-align: center; /* Allineamento del testo al centro */
+    font-size: 1rem;
+    margin-bottom: 20px;
+}
+
+.welcome-banner h1 {
+    margin-bottom: 10px;
+    font-size: 1.5rem;
+    font-weight: bold;
+}
+
+.welcome-banner h1 i {
+    color: #87CEEB; /* Colore dell'icona nel titolo del banner */
+}
+
+.welcome-banner p {
+    color: #333333; /* Colore del paragrafo del banner */
+    font-size: 1rem;
+}/* You can add global styles to this file, and also import other style files */
+
+
+/* Stili per la sezione del footer (contatti) */
+footer.contact-section {
+    background-color: #ADD8E6; /* Sfondo del footer uguale allo sfondo della pagina */
+    padding: 20px;
+    height: 150px;
+}
+
+.contact-section .content-block {
+    width: 48%;
+    border-radius: 8px;
+    box-sizing: border-box;
+    margin-top: 10px;
+    min-height: auto;
+    display: flex; /* Utilizzo di Flexbox per la disposizione interna */
+    flex-direction: column; /* Disposizione degli elementi in colonna */
+    justify-content: flex-start; /* Allineamento del contenuto all'inizio */
+    padding: 15px;
+}
+
+.contact-section .image-block {
+    float: left; /* Posiziona l'immagine a sinistra */
+    margin-top: 5px;
+    margin-bottom: 5px;
+}
+
+.contact-section .image-block img {
+    width: 80%;
+    max-width: 300px;
+    height: auto;
+    display: block; /* Rende l'immagine un elemento di blocco per centrarla con margin auto */
+    margin: 10px auto; /* Centra l'immagine orizzontalmente */
+}
+
+.contact-section .text-block {
+    float: right; /* Posiziona il testo a destra */
+    text-align: left;
+    font-size: 1rem;
+}
+
+.contact-section h2 {
+    font-size: 1rem;
+    margin-top: 5px;
+    margin-bottom: 8px;
+}
+
+.contact-section ul {
+    margin-top: 5px;
+    list-style: none; /* Rimozione dei punti elenco */
+}
+
+.contact-section li {
+    margin-top: 5px;
+}
+
+.contact-section li a {
+    font-size: 1rem;
+    text-decoration: none; /* Rimozione della sottolineatura dai link */
+    color: inherit; /* Eredita il colore del testo dal contenitore */
+    margin-left: 10px; /* Spazio a sinistra del link */
+}
+
+
+@media (max-width: 768px) {
+
+    footer.contact-section .text-block {
+        text-align: center;
+        font-size: 1rem;
+    }
+
+    .button-eroi {
+        padding: 8px 15px;
+        font-size: 1rem;
+        margin-top: 10px;
+    }
+
+    footer.contact-section {
+        padding: 15px;
+    }
+
+    footer.contact-section .content-block {
+        padding: 10px;
+        margin-top: 10px;
+        align-items: center;
+        text-align: center;
+    }
+
+    footer.contact-section .image-block img {
+        width: 60%;
+        max-width: 200px;
+        height: auto;
+        display: block;
+        margin: 10px auto;
+        border-radius: 8px;
+    }
+
+    footer.contact-section h2 {
+        font-size: 1rem;
+        margin-top: 5px;
+        margin-bottom: 5px;
+    }
+
+    footer.contact-section ul {
+        margin-top: 5px;
+        margin-bottom: 0;
+    }
+
+    footer.contact-section li {
+        margin-top: 3px;
+    }
+
+    footer.contact-section li a {
+        font-size: 1rem;
+    }
+}
