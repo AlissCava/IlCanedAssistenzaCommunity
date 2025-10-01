@@ -1,0 +1,97 @@
+
+/* ========================================================================== 
+   Sezione Dicono di Noi
+   ========================================================================== */
+#dicono-di-noi {
+  background-color: #ADD8E6;
+  padding: 2rem;
+  border-radius: 1rem;
+  margin: auto;
+  width: 80%;
+}
+
+#dicono-di-noi h2 {
+  font-size: 2rem;
+  color: #5d3e85;
+  text-align: center;
+  margin-bottom: 1.5rem;
+}
+
+.media-grid {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 1rem;
+}
+
+.media-card {
+  background-color: white;
+  border-left: 5px solid #b490d9;
+  padding: 1rem;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
+  border-radius: 0.5rem;
+}
+
+.media-card h3 {
+  font-size: 1.2rem;
+  color: #5d3e85;
+  margin-bottom: 0.5rem;
+}
+
+.media-card p {
+  font-size: 1rem;
+  color: #444;
+  margin-bottom: 0.5rem;
+}
+
+.media-card a {
+  color: #7c4bc1;
+  font-weight: bold;
+  text-decoration: none;
+}
+
+.media-card a:hover {
+  text-decoration: underline;
+}
+
+/* Media query per due colonne su desktop e tablet orizzontale */
+@media (min-width: 990px) {
+  .media-grid {
+    grid-template-columns: 1fr 1fr;
+  }
+}
+
+
+.media-card {
+    background-color: white;
+    border-left: 5px solid #ADD8E6;
+    padding: 1rem;
+    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
+    border-radius: 0.5rem;
+    transition: transform 0.2s;
+}
+
+.media-card:hover {
+    transform: scale(1.02);
+}
+
+.media-card h3 {
+    font-size: 1.2rem;
+    color: #5d3e85;
+    margin-bottom: 0.5rem;
+}
+
+.media-card p {
+    font-size: 1rem;
+    color: #444;
+    margin-bottom: 0.5rem;
+}
+
+.media-card a {
+    color: #ADD8E6;
+    font-weight: bold;
+    text-decoration: none;
+}
+
+.media-card a:hover {
+    text-decoration: underline;
+}

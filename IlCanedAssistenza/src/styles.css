@@ -1,4 +1,10 @@
+/* ==========================================================================
+   Stili generali della pagina
+   ========================================================================== */
+
+/* Stili per l'elemento body (sfondo, margini, padding, font, ecc.) */
 body {
+    font-size: 1rem;
     font-family: sans-serif;
     margin: 0;
     padding: 0;
@@ -10,6 +16,11 @@ body {
     flex-direction: column; /* Disposizione degli elementi figli in colonna */
 }
 
+/* ==========================================================================
+   Stili per la Navbar
+   ========================================================================== */
+
+/* Stili per la barra di navigazione principale */
 .navbar {
     background-color: #ADD8E6; /* Sfondo della navbar uguale allo sfondo della pagina */
     margin-top: 0;
@@ -42,147 +53,215 @@ body {
     color: #333333; /* Colore del testo dei link al passaggio del mouse */
 }
 
-/* ==========================================================================
-   Stili per il Banner di Benvenuto
+/* ========================================================================== 
+   Banner di benvenuto
    ========================================================================== */
 
-/* Stili per la sezione del banner di benvenuto in alto */
 .welcome-banner {
-    background-color: #ADD8E6; /* Sfondo del banner uguale allo sfondo della pagina */
-    color: #000000; /* Colore del testo del banner */
+    background-color: #ADD8E6;
+    color: #000000;
     padding: 20px;
-    text-align: center; /* Allineamento del testo al centro */
+    text-align: center;
     font-size: 1rem;
-    margin-bottom: 20px;
 }
 
 .welcome-banner h1 {
-    margin-bottom: 10px;
-    font-size: 1.5rem;
+    margin-top: 20px;
+    font-size: 2em;
     font-weight: bold;
 }
 
 .welcome-banner h1 i {
-    color: #87CEEB; /* Colore dell'icona nel titolo del banner */
+    font-size: 2em;
+    color: #87CEEB;
 }
 
 .welcome-banner p {
-    color: #333333; /* Colore del paragrafo del banner */
+    color: #333333;
     font-size: 1rem;
-}/* You can add global styles to this file, and also import other style files */
+}
+
+/* ==========================================================================
+   Stili per il Footer
+   ========================================================================== */
+.custom-footer {
+  background-color: #224f71; /* azzurro scuro */
+  padding: 20px 10px;
+  text-align: center;
+  color: #fff;
+}
+
+.footer-buttons {
+  margin-bottom: 15px;
+}
+
+.footer-btn {
+  display: inline-block;
+  margin: 5px 10px;
+  padding: 10px 20px;
+  border: none;
+  border-radius: 999px;
+  color: white;
+  font-weight: bold;
+  text-decoration: none;
+  transition: background-color 0.3s ease;
+}
+
+.footer-btn.insta {
+  background-color: #e1306c; /* rosa Instagram */
+}
+
+.footer-btn.tiktok {
+  background-color: #444; /* grigio scuro */
+}
+
+.footer-btn.email {
+  background-color: #3498db; /* azzurro email */
+}
+
+.footer-btn:hover {
+  opacity: 0.85;
+}
+
+.privacy-text {
+  font-size: 13px;
+  color: #ccc;
+  margin: 10px auto;
+  max-width: 500px;
+}
+
+.copyright {
+  font-size: 12px;
+  color: #bbb;
+  margin-top: 10px;
+}
 
 
-/* Stili per la sezione del footer (contatti) */
-footer.contact-section {
-    background-color: #ADD8E6; /* Sfondo del footer uguale allo sfondo della pagina */
+
+@media screen and (max-width: 990px) {
+  /* Welcome banner */
+  .welcome-banner {
+    text-align: center;
     padding: 20px;
-    height: 150px;
-}
+  }
 
-.contact-section .content-block {
-    width: 48%;
-    border-radius: 8px;
-    box-sizing: border-box;
-    margin-top: 10px;
-    min-height: auto;
-    display: flex; /* Utilizzo di Flexbox per la disposizione interna */
-    flex-direction: column; /* Disposizione degli elementi in colonna */
-    justify-content: flex-start; /* Allineamento del contenuto all'inizio */
-    padding: 15px;
-}
+  .welcome-banner h1 {
+    font-size: 1.4rem;
+  }
 
-.contact-section .image-block {
-    float: left; /* Posiziona l'immagine a sinistra */
-    margin-top: 5px;
-    margin-bottom: 5px;
-}
+  .welcome-banner p {
+    font-size: 1rem;
+  }
 
-.contact-section .image-block img {
-    width: 80%;
-    max-width: 300px;
+  /* Icone zampa più piccole */
+  .fa-paw.fa-xl {
+    font-size: 1rem;
+  }
+
+  /* SEZIONE 1 */
+  .section {
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+  }
+
+  .section .text-block {
+    padding: 10px;
+    width: 100%;
+     display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .section .image-block {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .section img {
+    max-width: 90%;
     height: auto;
-    display: block; /* Rende l'immagine un elemento di blocco per centrarla con margin auto */
-    margin: 10px auto; /* Centra l'immagine orizzontalmente */
-}
+    margin: 15px 0;
+    border-radius: 8px;
+    margin-right: 8%;
+  }
 
-.contact-section .text-block {
-    float: right; /* Posiziona il testo a destra */
-    text-align: left;
+  .button-instagram-container {
+    text-align: center;
+    margin-bottom: 2rem;
+     margin-right: 9%;
+  }
+
+  .button-instagram {
+    font-size: 0.9rem;
+    padding: 18px;
+    display: inline-block;
+  }
+
+  /* SEZIONE 2 */
+  .section-reverse {
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+  }
+
+  .section-reverse .image-block {
+    order: -1;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+  }
+
+  .section-reverse img {
+    max-width: 90%;
+    height: auto;
+    border-radius: 8px;
+    margin-bottom: 15px;
+    margin-right: 7%;
+  }
+
+  .section-reverse .text-block {
+    padding: 10px;
+  }
+
+  .button-wrapper {
+    margin-top: 10px;
+    text-align: center;
+  }
+
+  .button-eroi {
     font-size: 1rem;
+    padding: 18px;
+    display: inline-block;
+    font-weight: bold;
+  }
+
+  /* FOOTER */
+  .custom-footer {
+    text-align: center;
+    padding: 20px 10px;
+  }
+
+  .footer-buttons {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+    align-items: center;
+  }
+
+  .footer-btn {
+    font-size: 0.85rem;
+    padding: 6px 12px;
+    width: auto;
+  }
+
+  .privacy-text,
+  .copyright {
+    font-size: 0.75rem;
+    margin-top: 10px;
+  }
 }
 
-.contact-section h2 {
-    font-size: 1rem;
-    margin-top: 5px;
-    margin-bottom: 8px;
-}
-
-.contact-section ul {
-    margin-top: 5px;
-    list-style: none; /* Rimozione dei punti elenco */
-}
-
-.contact-section li {
-    margin-top: 5px;
-}
-
-.contact-section li a {
-    font-size: 1rem;
-    text-decoration: none; /* Rimozione della sottolineatura dai link */
-    color: inherit; /* Eredita il colore del testo dal contenitore */
-    margin-left: 10px; /* Spazio a sinistra del link */
-}
-
-
-@media (max-width: 768px) {
-
-    footer.contact-section .text-block {
-        text-align: center;
-        font-size: 1rem;
-    }
-
-    .button-eroi {
-        padding: 8px 15px;
-        font-size: 1rem;
-        margin-top: 10px;
-    }
-
-    footer.contact-section {
-        padding: 15px;
-    }
-
-    footer.contact-section .content-block {
-        padding: 10px;
-        margin-top: 10px;
-        align-items: center;
-        text-align: center;
-    }
-
-    footer.contact-section .image-block img {
-        width: 60%;
-        max-width: 200px;
-        height: auto;
-        display: block;
-        margin: 10px auto;
-        border-radius: 8px;
-    }
-
-    footer.contact-section h2 {
-        font-size: 1rem;
-        margin-top: 5px;
-        margin-bottom: 5px;
-    }
-
-    footer.contact-section ul {
-        margin-top: 5px;
-        margin-bottom: 0;
-    }
-
-    footer.contact-section li {
-        margin-top: 3px;
-    }
-
-    footer.contact-section li a {
-        font-size: 1rem;
-    }
-}
+   

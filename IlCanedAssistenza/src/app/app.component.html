@@ -1,48 +1,41 @@
-<nav class="navbar navbar-expand-lg ">
+<!-- app.component.html -->
+<header>
+  <nav class="navbar navbar-expand-lg">
     <div class="container-fluid">
-        <a class="navbar-brand" href="#">
-            <img src="assets/image/logo.png" alt="Logo" width="30" height="24" class="d-inline-block align-text-top">
-            IlCanedAssistenza
-        </a>
-        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
-            <span class="navbar-toggler-icon"></span>
-        </button>
-        <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
-            <div class="navbar-nav">
-                <a class="nav-link active" routerLink="">Home</a>
-                <a class="nav-link active " routerLink="/cani">I nostri eroi</a>
-                <a class="nav-link active" routerLink="">Dicono di noi</a>
-            </div>
+      <a class="navbar-brand" routerLink="/">
+        <img src="assets/image/logo.png" alt="Logo" width="30" height="24" class="d-inline-block align-text-top">
+        IlCanedAssistenza
+      </a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavAltMarkup"
+        aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
+        <div class="navbar-nav">
+          <a class="nav-link" routerLink="/cani">I nostri eroi</a>
+          <a class="nav-link" routerLink="/who">Dicono di noi</a>
         </div>
+      </div>
     </div>
-</nav>
+  </nav>
+</header>
 
-<main>
-  <router-outlet>
-    
-  </router-outlet>
-</main>
+<!-- Qui Angular inserisce i component secondo la rotta -->
+<router-outlet></router-outlet>
 
+<footer class="custom-footer">
+  <div class="footer-buttons">
+    <a href="https://www.instagram.com/ilcanedassistenza/" target="_blank" class="footer-btn insta">
+      <i class="fa-brands fa-instagram"></i> Instagram
+    </a>
+    <a href="https://www.tiktok.com/@ilcanedassistenza" target="_blank" class="footer-btn tiktok">
+      <i class="fa-brands fa-tiktok"></i> TikTok
+    </a>
+    <a href="mailto:ilcanedassistenza@gmail.com" class="footer-btn email">
+      <i class="fa-solid fa-envelope"></i> Email
+    </a>
+  </div>
 
-<footer class="section contact-section">
-    <div class="content-block image-block">
-        <img src="assets/image/logo.png" alt="Logo IlCaneDassistenza" style="width: 150px; height: auto; display: block; margin: 10px auto; border-radius: 8px;">
-    </div>
-    <div class="content-block text-block contact-info">
-        <h2><strong>Contattaci!</strong></h2>
-        <ul style="list-style: none; padding: 0;">
-            <li>
-                <i class="fa-brands fa-instagram fa-xl" style="color: #e1306c;"></i>
-                <a href="https://www.instagram.com/ilcanedassistenza/#:~:text=IL%20CANE%20D'ASSISTENZA%20(%40,%E2%80%A2%20Instagram%20photos%20and%20videos" target="_blank" style="text-decoration: none; color: inherit; margin-left: 10px;">Seguici su Instagram</a>
-            </li>
-            <li style="margin-top: 5px;">
-                <i class="fa-brands fa-tiktok fa-xl" style="color: #000000;"></i>
-                <a href="https://www.tiktok.com/@ilcanedassistenza?_t=ZN-8veyVxVRPgE&_r=1" target="_blank" style="text-decoration: none; color: inherit; margin-left: 10px;">Seguici su TikTok</a>
-            </li>
-            <li style="margin-top: 5px;">
-                <i class="fa-solid fa-envelope fa-xl" style="color: #007bff;"></i>
-                <a href="mailto:ilcanedassistenza@gmail.com" style="text-decoration: none; color: inherit; margin-left: 10px;">Inviaci una email a: "ilcanedassistenza@gmail.com </a>
-            </li>
-        </ul>
-    </div>
+  <p class="privacy-text">I dati non vengono raccolti né condivisi. Questo sito è a scopo informativo e non utilizza cookie di profilazione.</p>
+  <p class="copyright">© 2025 IlCaneDAssistenzaCommunity. Tutti i diritti riservati.</p>
 </footer>

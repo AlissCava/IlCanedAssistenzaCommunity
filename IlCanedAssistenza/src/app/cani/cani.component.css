@@ -1,116 +1,166 @@
-
-/* Stili per il contenuto principale */
-
+/* ========================================================================== 
+   Hero Section
+   ========================================================================== */
 
 .hero-main {
-    padding: 20px;
-    margin: 20px auto;
-    max-width: 1600px;
-    background-color: #ffffff;
-    border-radius: 8px;
-    width: 100%; /* Ricordato! */
+    padding: 20px; /* Spaziatura interna */
+    margin: 20px auto; /* Margine verticale e centratura orizzontale */
+    max-width: 90%; /* Larghezza massima */
+    width: 100%; /* Larghezza piena */
+    background-color: #fff; /* Sfondo bianco */
+    border-radius: 8px; /* Angoli arrotondati */
 }
 
 .hero-title {
-    color: #333;
-    text-align: center;
-    margin-bottom: 30px;
+    color: #333; /* Colore testo titolo */
+    text-align: center; /* Allineamento al centro */
+    margin: 1rem 0 30px 0; /* Margine superiore e inferiore */
 }
 
-/* Stili per la griglia dei cani */
+/* ========================================================================== 
+   Griglia e Card dei cani
+   ========================================================================== */
+
 .dog-grid {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(500px, 1fr)); /* Griglia a più colonne responsiva (default) */
+    display: grid; /* Layout a griglia */
+    grid-template-columns: repeat(auto-fit, minmax(30%, 1fr)); /* Colonne responsive */
     gap: 20px; /* Spazio tra le card */
 }
 
-/* Stili per la singola scheda del cane */
 .dog-card {
-    background-color: #ADD8E6;
-    border-radius: 8px;
-    overflow: hidden;
-    box-shadow: 0 0.5rem 0.25rem rgba(0, 0, 0, 0.09);
-    display: flex;
-    flex-direction: column;
-    padding: 5px;
+    background-color: #ffffffcc; /* Sfondo semi-trasparente card */
+    border-radius: 12px; /* Angoli arrotondati */
+    box-shadow: 0 4px 12px rgba(0,0,0,0.15); /* Ombra della card */
+    overflow: hidden; /* Nasconde contenuti eccedenti */
+    display: flex; /* Layout flessibile verticale */
+    flex-direction: column; /* Contenuto verticale */
+    cursor: pointer; /* Puntatore al passaggio del mouse */
+    margin: 20px; /* Spazio esterno */
+    position: relative; /* Necessario per posizionare figli assoluti */
+    transition: transform 0.3s ease, box-shadow 0.3s ease; /* Animazioni hover */
 }
 
-/* Stili per il contenitore dell'immagine */
-.dog-image-container {
-    width: 100%;
-    height: 200px;
-    overflow: hidden;
-    border-radius: 8px 8px 0 0;
+.dog-card .dog-image-container {
+    width: 100%; /* Larghezza piena */
+    height: 250px; /* Altezza fissa immagine */
+    overflow: hidden; /* Nasconde eccedenze immagine */
+    position: relative; /* Per posizionamento assoluto interno */
 }
 
-/* Stili per l'immagine del cane */
-.dog-image {
-    width: 100%;
-    height: 100%;
-    display: block;
-    object-fit: contain;
+.dog-card .dog-image {
+    width: 100%; /* Larghezza immagine */
+    height: 100%; /* Altezza immagine */
+    object-fit: contain; /* Immagine contenuta senza tagliare */
+    transition: transform 0.3s ease; /* Animazione zoom hover */
+    z-index: 1; /* Sopra descrizione di base */
 }
 
-/* Stili per le informazioni del cane */
-.dog-info {
-    padding: 10px;
-    text-align: center;
-    /* Rimossa l'altezza massima e l'overflow per permettere agli altri elementi di fluire */
+.dog-card:hover .dog-image {
+    transform: scale(1.02); /* Zoom leggero al passaggio del mouse */
 }
 
-/* Stili per il contenitore della storia del cane (scrollbar solo qui) */
-.dog-story-container {
-    max-height: 2000px; /* Imposta un'altezza massima per far apparire la scrollbar quando necessario */
-    overflow-y: auto; /* Aggiunge la scrollbar verticale se il contenuto supera l'altezza massima */
-    margin-top: 10px; /* Aggiunge un po' di spazio sopra la storia */
-    text-align: left; /* Riporta il testo della storia ad allineamento a sinistra per la lettura */
+/* Info principali */
+.dog-card .dog-info {
+    padding: 15px 20px; /* Spaziatura interna */
+    text-align: center; /* Testo centrato */
+    position: relative; /* Necessario per sovrapposizione */
+    background-color: transparent; /* Sfondo trasparente */
+    z-index: 1; /* Sopra descrizione base */
 }
 
-/* Stili per il nome del cane (titolo) */
-.dog-name {
-    font-size: 1.2rem;
-    margin-bottom: 5px;
-    font-weight: bold;
-    color: #212529;
+.dog-card .dog-name {
+    font-size: 1.8rem; /* Dimensione nome */
+    font-weight: bold; /* Grassetto */
+    margin: 10px 0 5px; /* Margine sopra e sotto */
+    color: #224f71; /* Colore nome */
 }
 
-/* Stili per il tipo di assistenza (sottotitolo) */
-.dog-assistance {
-    font-size: 0.9rem;
-    color: #6c757d;
-    margin-bottom: 10px;
+.dog-card .dog-assistance {
+    font-size: 1.2rem; /* Dimensione ruolo */
+    color: #6c757d; /* Colore ruolo */
+    margin-bottom: 10px; /* Spazio sotto ruolo */
 }
 
-/* Stili per la breve storia */
-.dog-story {
-    font-size: 1rem;
-    color: #495057;
-    margin-bottom: 0; /* Rimosso il margine inferiore per evitare spazio extra nella scrollbar */
+/* Descrizione “dietro” */
+.dog-card .dog-story-container {
+    position: absolute; /* Posizionamento assoluto sopra card */
+    top: 0; /* Allineata in alto */
+    left: 0; /* Allineata a sinistra */
+    width: 100%; /* Larghezza piena */
+    height: 80%; /* Altezza limitata */
+    padding: 15px 20px; /* Spazio interno */
+    font-size: 1rem; /* Dimensione testo */
+    color: #333; /* Colore testo */
+    background-color: #ffffffee; /* Sfondo semi-trasparente */
+    opacity: 0; /* Inizialmente invisibile */
+    overflow-y: auto; /* Scroll verticale se troppo lungo */
+    border-radius: 12px; /* Angoli arrotondati */
+    z-index: 1; /* Sotto info e immagine */
+    transition: opacity 0.3s ease; /* Animazione apparizione */
+}
+
+.dog-card:hover .dog-story-container {
+    opacity: 1; /* Diventa visibile */
+    z-index: 5; /* Sopra immagine e nome */
+}
+
+/* Bottone Instagram */
+.dog-card .instagram-button {
+    margin: 10px auto 20px; /* Centrato con margini */
+    padding: 10px 20px; /* Spaziatura interna */
+    font-size: 1rem; /* Dimensione testo */
+    border-radius: 8px; /* Angoli arrotondati */
+    background-color: #e1306c; /* Colore sfondo Instagram */
+    color: #fff; /* Colore testo bianco */
+    text-decoration: none; /* Nessuna sottolineatura */
+    display: inline-flex; /* Layout flessibile orizzontale */
+    align-items: center; /* Allinea icona e testo verticalmente */
+    justify-content: center; /* Centra contenuto orizzontalmente */
+    gap: 8px; /* Spazio tra icona e testo */
+    transition: background-color 0.3s ease, transform 0.2s ease; /* Animazioni hover */
+    z-index: 10; /* Sopra tutto */
+}
+
+.dog-card .instagram-button:hover {
+    background-color: #f06595; /* Cambio colore hover */
+    transform: scale(1.05); /* Leggero ingrandimento hover */
 }
 
 
-/* Media query per schermi più piccoli (mobile) */
-@media (max-width: 980px) {
-    body {
-        border: 6px solid #ADD8E6;
-    }
+/* ========================================================================== 
+   Media Queries Mobile
+   ========================================================================== */
+
+@media (max-width: 990px) {
 
     .dog-grid {
-        grid-template-columns: repeat(1, 1fr); /* Imposta la griglia a una sola colonna su mobile */
+        grid-template-columns: 1fr; /* Una colonna per card */
     }
 
-    .dog-image-container {
-        height: 150px; /* Altezza ridotta su mobile */
+    .dog-card {
+        width: 90%; /* Larghezza ridotta per mobile */
+        margin: 15px auto; /* Centrata con margine */
     }
 
-    .dog-info {
-        padding: 8px;
+    .dog-card .dog-image-container {
+        height: 200px; /* Altezza immagine ridotta */
     }
 
-    .dog-story-container {
-        max-height: 120px; /* Altezza ridotta su mobile */
-        overflow-y: auto;
-        margin-top: 5px;
-        text-align: left;
+    .dog-card .dog-name { font-size: 1.5rem; } /* Nome più piccolo */
+    .dog-card .dog-assistance { font-size: 1rem; } /* Ruolo più piccolo */
+
+    .dog-card .dog-story-container {
+        font-size: 0.95rem; /* Testo leggermente più piccolo */
+        padding: 0 15px 10px; /* Spaziatura interna adattata */
+        position: relative; /* Posizionamento naturale sotto immagine */
+        opacity: 1; /* Sempre visibile */
+        background-color: transparent; /* Sfondo trasparente */
+        z-index: 1; /* Dietro eventuali elementi */
     }
+
+    .dog-card .instagram-button {
+        font-size: 0.95rem; /* Testo più piccolo */
+        padding: 8px 16px; /* Spaziatura ridotta */
+    }
+
 }

@@ -1,3 +1,62 @@
+/* ==========================================================================
+   Stili generali della pagina
+   ========================================================================== */
+
+/* Stili per l'elemento body (sfondo, margini, padding, font, ecc.) */
+body {
+    font-size: 1rem;
+    font-family: sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #ADD8E6; /* Azzurro chiaro di sfondo */
+    border: 12px solid #ADD8E6; /* Bordo esterno dello stesso colore dello sfondo */
+    box-sizing: border-box;
+    min-height: 100vh; /* Assicura che il body occupi almeno l'altezza della viewport */
+    display: flex; /* Utilizzo di Flexbox per la disposizione degli elementi figli */
+    flex-direction: column; /* Disposizione degli elementi figli in colonna */
+}
+
+/* ==========================================================================
+   Stili per la Navbar
+   ========================================================================== */
+
+/* Stili per la barra di navigazione principale */
+.navbar {
+    background-color: #ADD8E6; /* Sfondo della navbar uguale allo sfondo della pagina */
+    margin-top: 0;
+}
+
+/* Stili per il marchio (logo e testo) della navbar */
+.navbar-brand {
+    display: flex; /* Utilizzo di Flexbox per allineare logo e testo */
+    align-items: center; /* Allineamento verticale degli elementi al centro */
+}
+
+.navbar-brand a {
+    font-size: 1.5rem;
+    color: #000000; /* Colore del testo del marchio */
+    text-decoration: none; /* Rimozione della sottolineatura dai link */
+}
+
+.navbar-brand img {
+    margin-right: 10px; /* Spazio a destra dell'immagine del logo */
+}
+
+/* Stili per il marchio e i link di navigazione */
+.navbar-brand,
+.navbar-nav .nav-link {
+    color: #000000; /* Colore del testo dei link della navbar */
+}
+
+.navbar-brand:hover,
+.navbar-nav .nav-link:hover {
+    color: #333333; /* Colore del testo dei link al passaggio del mouse */
+}
+
+/* ==========================================================================
+   Stili per il Banner di Benvenuto
+   ========================================================================== */
+
 /* Stili per la sezione del banner di benvenuto in alto */
 .welcome-banner {
     background-color: #ADD8E6; /* Sfondo del banner uguale allo sfondo della pagina */
@@ -9,12 +68,14 @@
 }
 
 .welcome-banner h1 {
+    margin-top: 20px;
     margin-bottom: 10px;
-    font-size: 1.5rem;
+    font-size: 2em;
     font-weight: bold;
 }
 
 .welcome-banner h1 i {
+    font-size: 2em;
     color: #87CEEB; /* Colore dell'icona nel titolo del banner */
 }
 
@@ -77,10 +138,12 @@
 
 .section .text-block p {
     text-align: left;
+    font-size: 1rem;
 }
 
 /* Stili specifici per il blocco immagine */
 .section .image-block {
+    margin-left: 2rem;
     float: right; /* Posiziona il blocco immagine a destra */
 }
 
@@ -134,96 +197,360 @@
     float: left; /* Posiziona il blocco immagine a sinistra */
 }
 
+.image-block img.image-small {
+  width: 100%;  /* o 70% se vuoi più piccolo */
+  max-width: 800px; /* limite massimo larghezza */
+  height: auto;
+  display: block;
+  margin-top: 2rem;
+  border-radius: 8px;
+  margin-right: rem;
+}
+
+.button-wrapper {
+  text-align: center; /* centra il pulsante */
+  margin-top: 15px; /* distanza dalla foto */
+}
+
+/* Il tuo stile per .button-eroi rimane uguale */
+
+
 /* ==========================================================================
    Stili per il Bottone Principale
    ========================================================================== */
 
 /* Stili per il bottone "Scopri i nostri eroi" */
 .button-eroi {
+    font-size: 2rem;
     display: inline-block; /* Permette di impostare larghezza e altezza e di affiancare altri elementi */
-    background-color: #87CEEB; /* Sfondo del bottone */
-    color: white; /* Colore del testo del bottone */
+    background-color: #ADD8E6; /* Sfondo del bottone */
+    color: #224f71;
     padding: 10px 20px;
     text-decoration: none; /* Rimozione della sottolineatura */
-    border-radius: 5px; /* Angoli arrotondati */
-    margin-top: 15px;
+    border-radius: 999px; /* Angoli arrotondati */
+    margin-top: 1rem;
+    margin-bottom: 2rem;
+    margin-right: 10%;
     transition: background-color 0.3s ease; /* Transizione fluida per il cambio di colore al passaggio del mouse */
     border: none; /* Rimozione del bordo predefinito */
 }
 
 .button-eroi:hover {
-    background-color: #66ace0; /* Sfondo del bottone leggermente più scuro al passaggio del mouse */
+    background-color: #89bde4;
+    color: #d8f5ff; /* Sfondo del bottone leggermente più scuro al passaggio del mouse */
 }
 
 .button-eroi i {
-    margin-left: 10px; /* Spazio tra il testo e l'icona */
+    margin-left: 10px;
+     /* Spazio tra il testo e l'icona */
+}
+
+.button-instagram {
+    display: inline-block;
+    margin: 2rem auto 0 auto; /* margine sopra, centrato orizzontalmente */
+    padding: 10px 18px;
+   background-color: #ADD8E6; /* Sfondo del bottone */
+    color: #224f71; /* verde scuro per contrasto */
+    font-weight: bold;
+    border-radius: 999px;
+    text-decoration: none;
+    font-size: 1.8rem;
+    transition: background-color 0.3s ease;
+    text-align: center;
+    cursor: pointer;
+}
+
+/* Per centrare il pulsante all'interno di un contenitore flex */
+.button-instagram-container {
+    display: flex;
+    justify-content: center;
+}
+
+/* Hover più scuro */
+.button-instagram:hover,
+.button-instagram:focus {
+    background-color: #89bde4;
+    color: #d8f5ff;
+    text-decoration: none;
+}
+
+/* ==========================================================================
+   Stili per il Footer
+   ========================================================================== */
+.custom-footer {
+  background-color: #224f71; /* azzurro scuro */
+  padding: 20px 10px;
+  text-align: center;
+  color: #fff;
+}
+
+.footer-buttons {
+  margin-bottom: 15px;
+}
+
+.footer-btn {
+  display: inline-block;
+  margin: 5px 10px;
+  padding: 10px 20px;
+  border: none;
+  border-radius: 999px;
+  color: white;
+  font-weight: bold;
+  text-decoration: none;
+  transition: background-color 0.3s ease;
+}
+
+.footer-btn.insta {
+  background-color: #e1306c; /* rosa Instagram */
+}
+
+.footer-btn.tiktok {
+  background-color: #444; /* grigio scuro */
+}
+
+.footer-btn.email {
+  background-color: #3498db; /* azzurro email */
+}
+
+.footer-btn:hover {
+  opacity: 0.85;
+}
+
+.privacy-text {
+  font-size: 13px;
+  color: #ccc;
+  margin: 10px auto;
+  max-width: 500px;
+}
+
+.copyright {
+  font-size: 12px;
+  color: #bbb;
+  margin-top: 10px;
+}
+
+/* ==========================================================================
+   Stili per Schermi Più Piccoli (Responsive Design)
+   ========================================================================== */
+
+@media screen and (max-width: 990px) {
+  /* Welcome banner */
+  .welcome-banner {
+    text-align: center;
+    padding: 20px;
+  }
+
+  .welcome-banner h1 {
+    font-size: 1.4rem;
+  }
+
+  .welcome-banner p {
+    font-size: 1rem;
+  }
+
+  /* Icone zampa più piccole */
+  .fa-paw.fa-xl {
+    font-size: 1rem;
+  }
+
+  /* SEZIONE 1 */
+  .section {
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+  }
+
+  .section .text-block {
+    padding: 10px;
+    width: 100%;
+     display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .section .image-block {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .section img {
+    max-width: 90%;
+    height: auto;
+    margin: 15px 0;
+    border-radius: 8px;
+    margin-right: 8%;
+  }
+
+  .button-instagram-container {
+    text-align: center;
+    margin-bottom: 2rem;
+     margin-right: 9%;
+  }
+
+  .button-instagram {
+    font-size: 0.9rem;
+    padding: 18px;
+    display: inline-block;
+  }
+
+  /* SEZIONE 2 */
+  .section-reverse {
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+  }
+
+  .section-reverse .image-block {
+    order: -1;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+  }
+
+  .section-reverse img {
+    max-width: 90%;
+    height: auto;
+    border-radius: 8px;
+    margin-bottom: 15px;
+    margin-right: 7%;
+  }
+
+  .section-reverse .text-block {
+    padding: 10px;
+  }
+
+  .button-wrapper {
+    margin-top: 10px;
+    text-align: center;
+  }
+
+  .button-eroi {
+    font-size: 1rem;
+    padding: 18px;
+    display: inline-block;
+    font-weight: bold;
+  }
+
+  /* FOOTER */
+  .custom-footer {
+    text-align: center;
+    padding: 20px 10px;
+  }
+
+  .footer-buttons {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+    align-items: center;
+  }
+
+  .footer-btn {
+    font-size: 0.85rem;
+    padding: 6px 12px;
+    width: auto;
+  }
+
+  .privacy-text,
+  .copyright {
+    font-size: 0.75rem;
+    margin-top: 10px;
+  }
 }
 
 
-@media (max-width: 768px) {
-    .welcome-banner {
-        margin-bottom: 10px;
-        font-size: 1rem;
-    }
 
-    .welcome-banner h1 {
-        font-size: 1.5rem;
-    }
+/* ==========================================================================
+   Stili per Schermi Più Piccoli (Responsive Design)
+   ========================================================================== */
 
-    .welcome-banner p {
-        font-size: 1rem;
-    }
+@media screen and (max-width: 990px) {
 
-    .section {
-        margin-bottom: 10px;
-        padding: 10px;
-        flex-direction: column; /* Impila gli elementi verticalmente su schermi piccoli */
-        align-items: center; /* Allinea gli elementi al centro orizzontalmente */
-    }
+  /* Icone zampa più piccole */
+  .fa-paw.fa-xl {
+    font-size: 1rem;
+  }
 
-    .section .content-block {
-        width: 100%; /* Occupano tutta la larghezza disponibile */
-        float: none;
-        margin-bottom: 15px;
-        margin-top: 0;
-    }
+  /* SEZIONE 1 */
+  .section {
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+  }
 
-    .section .text-block {
-        text-align: center; /* Centra il testo su schermi piccoli */
-        align-items: center; /* Allinea gli elementi (testo) al centro orizzontalmente */
-    }
+  .section .text-block {
+    padding: 10px;
+    width: 100%;
+     display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
 
-    .section .image-block {
-        float: none;
-    }
+  .section .image-block {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
 
-    .section-reverse {
-        margin-bottom: 10px;
-        padding: 10px;
-        flex-direction: column-reverse; /* Impila gli elementi verticalmente (immagine sopra il testo) */
-        align-items: center; /* Allinea gli elementi al centro orizzontalmente */
-    }
+  .section img {
+    max-width: 90%;
+    height: auto;
+    margin: 15px 0;
+    border-radius: 8px;
+    margin-right: 8%;
+  }
 
-    .section-reverse .content-block {
-        width: 100%;
-        float: none;
-        margin-bottom: 15px;
-        margin-top: 0;
-    }
+  .button-instagram-container {
+    text-align: center;
+    margin-bottom: 2rem;
+     margin-right: 9%;
+  }
 
-    .section-reverse .text-block {
-        text-align: center; /* Centra il testo */
-        align-items: center; /* Allinea gli elementi (testo) orizzontalmente */
-    }
+  .button-instagram {
+    font-size: 0.9rem;
+    padding: 18px;
+    display: inline-block;
+  }
 
-    .section-reverse .image-block {
-        float: none;
-    }
+  /* SEZIONE 2 */
+  .section-reverse {
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+  }
 
-    .button-eroi {
-        padding: 8px 15px;
-        font-size: 1rem;
-        margin-top: 10px;
-    }
+  .section-reverse .image-block {
+    order: -1;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+  }
 
+  .section-reverse img {
+    max-width: 90%;
+    height: auto;
+    border-radius: 8px;
+    margin-bottom: 15px;
+    margin-right: 7%;
+  }
+
+  .section-reverse .text-block {
+    padding: 10px;
+  }
+
+  .button-wrapper {
+    margin-top: 10px;
+    text-align: center;
+  }
+
+  .button-eroi {
+    font-size: 1rem;
+    padding: 18px;
+    display: inline-block;
+    font-weight: bold;
+  }
 }
+
+   
