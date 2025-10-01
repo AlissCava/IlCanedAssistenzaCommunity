@@ -16,5 +16,3 @@ Il sito è stato realizzato con:
 - **HTML5 / CSS3**  
 
 
-## 🚀 Avvio locale
-Per visualizzare il progetto sul tuo computer:
